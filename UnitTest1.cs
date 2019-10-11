@@ -12,7 +12,7 @@ namespace Tests
         public void test()
         {
             driver.Navigate().GoToUrl("https://www.youtube.com");
-            Thread.sleep(6000);
+            Thread.Sleep(6000);
         }
 
        
