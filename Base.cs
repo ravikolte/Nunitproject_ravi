@@ -22,11 +22,17 @@ namespace Nunitproject_ravi
             DesiredCapabilities Capabilities = new DesiredCapabilities();
             Capabilities.SetCapability(CapabilityType.BrowserName, "chrome");
 
-            //ChromeOptions Options = new ChromeOptions();
-           
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("start-maximized"); // open Browser in maximized mode
+            options.AddArgument("disable-infobars"); // disabling infobars
+            options.AddArgument("--disable-extensions"); // disabling extensions
+            options.AddArgument("--disable-gpu"); // applicable to windows os only
+            options.AddArgument("--disable-dev-shm-usage"); // overcome limited resource problems
+            options.AddArgument("--no-sandbox"); // Bypass OS security model
+
 
             driver = new RemoteWebDriver(
-              new Uri("http://192.168.99.100:4546/wd/hub/"), Capabilities, TimeSpan.FromSeconds(600));// NOTE: connection timeout of 600 seconds or more required for time to launch grid nodes if non are available.
+              new Uri("http://192.168.99.100:4546/wd/hub/"), options.ToCapabilities(), TimeSpan.FromSeconds(600));// NOTE: connection timeout of 600 seconds or more required for time to launch grid nodes if non are available.
                                                                                                                                           // driver = new ChromeDriver(@"C:\\Users\\Ravi\\.nuget\\packages\\selenium.webdriver.chromedriver\\77.0.3865.4000\\driver\\win32");
         }
 
