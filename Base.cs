@@ -20,7 +20,7 @@ namespace Nunitproject_ravi
         {
 
             DesiredCapabilities Capabilities = new DesiredCapabilities();
-            Capabilities.SetCapability(CapabilityType.BrowserName, "Chrome");
+            Capabilities.SetCapability(CapabilityType.BrowserName, "chrome");
 
             //ChromeOptions Options = new ChromeOptions();
            
