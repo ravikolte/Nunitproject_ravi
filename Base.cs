@@ -28,7 +28,7 @@ namespace Nunitproject_ravi
 
 
             driver = new RemoteWebDriver(
-              new Uri("http://http://192.168.99.100:4546/wd/hub/"), Options.ToCapabilities(), TimeSpan.FromSeconds(600));// NOTE: connection timeout of 600 seconds or more required for time to launch grid nodes if non are available.
+              new Uri("http://192.168.99.100:4546/wd/hub/"), Options.ToCapabilities(), TimeSpan.FromSeconds(600));// NOTE: connection timeout of 600 seconds or more required for time to launch grid nodes if non are available.
                                                                                                                                           // driver = new ChromeDriver(@"C:\\Users\\Ravi\\.nuget\\packages\\selenium.webdriver.chromedriver\\77.0.3865.4000\\driver\\win32");
         }
 
