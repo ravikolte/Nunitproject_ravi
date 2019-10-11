@@ -2,6 +2,7 @@ using NUnit.Framework;
 using Nunitproject_ravi;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System.Threading;
 
 namespace Tests
 {
@@ -11,6 +12,7 @@ namespace Tests
         public void test()
         {
             driver.Navigate().GoToUrl("https://www.youtube.com");
+            Thread.sleep(6000);
         }
 
        
